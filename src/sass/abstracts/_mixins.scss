@@ -1,0 +1,34 @@
+@mixin triangles {
+  width: 0;
+  height: 0;
+  align-self: flex-end;
+  position: absolute;
+}
+
+@mixin spaces {
+  width: 0;
+  height: 0;
+  bottom: 0;
+  align-self: flex-end;
+  position: absolute;
+  h2{
+    text-align: center;
+    color: $light-tan;
+    top: 150px;
+    right: 200px;
+    position: relative;
+    width: 400px;
+    height: 200px;
+    margin: 0px;
+  }
+  p{
+    color: $light-green;
+    position: relative;
+    text-align: center;
+    top: 10px;
+    right: 200px;
+    width: 400px;
+    height: 200px;
+    margin: 0px;
+  }
+}
