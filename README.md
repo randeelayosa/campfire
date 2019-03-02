@@ -100,23 +100,27 @@ _<h4 align="center">Desktop</h4>_
 
 ## Setup/Installation Requirements
 
+#### _Installing Webpack_
+* To view this app file you must have npm installed on your computer. To do so, go into your home directory and follow the instructions in this link: <a href="https://www.learnhowtoprogram.com/user-interfaces/responsive-design-development-environments/module-bundling-with-webpack">_Webpack Installation Instructions_</a>.
+* If you already have npm installed, through the Terminal, go into the app file after you have cloned it down to your desktop, then enter the command "_npm install_", and then enter "_npm run start_".
+
 #### _To open and view this project:_
-* Go to this link to view the files on GitHub https://github.com/randeelayosa/coworking.git , or you can also clone the repository.
+* Go to this link to view the files on GitHub _https://github.com/randeelayosa/coworking.git_, or you can also clone the repository.
 * To clone, open your Mac Terminal, enter the command: _cd desktop_ , enter the command: _git clone [paste link here]_ and then press _Enter._
 * Go to your desktop and open the cloned project file. Select the files you want to view, right click, and select the text editor of your preference. (i.e. Atom.)
 * To view the live version of the webpage, right click on the _index.html_ file in the cloned folder and select the the web browser of your preference (i.e. Chrome).
 
 #### _To open and view Sketch files:_
 * In the file you have cloned down to your desktop find the item that ends with _.sketch_ and double click to see the Wireframe and Prototype layouts.
-* _Sketch files can only work with Mac. If you do not have Sketch, easily activate a free trial at this link https://www.sketchapp.com/get/_ .
+* _Sketch files can only work with Mac. If you do not have Sketch, easily activate a free trial at this link _https://www.sketchapp.com/get/_.
 
 ## Responsiveness
 
-{After we begin creating responsive sites in week 3, you should also include a description of how this site is responsive. Does it include both mobile and desktop versions? Mobile, desktop and tablet? List that information here.}
+This app uses media queries, flex-box, and grid box to maintain layout structures pertinent to mobile, tablet, and desktop views. Move your viewer window around to see it in action. Or, go into Chrome's Inspector element in Dev Tools and use the responsive view options to see breakpoints.
 
 ## Developmental Roadmap
 
-{Is there work you plan on continuing doing on this project? Features you'd like to add? If so, describe what your future intentions are in this section.}
+I plan to finish out the rest of the pages and features on I had originally designed and planned out for this app. I also intend to add a dropdown menu for mobile and tablet views.
 
 ## Technologies Used
 
