@@ -4,7 +4,7 @@
 
 *{
   margin: 0;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 body{
@@ -33,10 +33,9 @@ a{
   text-decoration: none;
 }
 
-h1{
+h1, h2{
   width: 100%;
   text-align: center;
-  font-size: 3em;
   color: $reg-green;
   margin: 0px;
 }
@@ -46,107 +45,12 @@ h1{
   height: 100%;
 }
 
-/* UPPER  */
-.upper{
-  display: flex;
-  height: 50vh;
-  width: 100%;
-  float: right;
-}
-
-.triangles{
-  width: 100%;
-  // height: 50vh;
-  display: flex;
-}
-
 p{
   font-size: 1.6em;
   letter-spacing: .2em;
   color: $light-tan;
 }
 
-#title{
-  @include triangles;
-  left: 12%;
-  border-right: 400px solid transparent;
-  border-left: 400px solid transparent;
-  border-bottom: 625px solid $dark-purple;
-  .title-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    position: relative;
-    width: 400px;
-    height: auto;
-    top: 160px;
-    right: 200px;
-    img{
-      width: 60%;
-      height: auto;
-      margin: auto;
-    }
-  }
-}
-
-#welcome{
-  @include triangles;
-  left: 30%;
-  border-right: 400px solid transparent;
-  border-left: 400px solid transparent;
-  border-bottom: 550px solid $mid-purple;
-  p{
-    position: relative;
-    text-align: center;
-    top: 250px;
-    right: 200px;
-    width: 400px;
-    height: 200px;
-    margin: 0px;
-  }
-}
-
-#entrance{
-  display: flex;
-  img{
-    align-self: flex-end;
-    left: -5%;
-    width: 50%;
-    max-width: 950px;
-    max-height: 480px;
-    position: absolute;
-    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  }
-}
-
-// .triangle-up {
-//   border: 1px solid green;
-//   height: 0;
-//   padding-left:70%;
-//   padding-bottom:50%;
-//   padding-top: 10%;
-//   overflow: hidden;
-//   p{
-//     position: absolute;
-//     text-align: center;
-//     font-size: 1.5vw;
-//     width: 25%;
-//     top: 28%;
-//     right: 16.5%;
-//   }
-// }
-// .triangle-up:after {
-//     content: "";
-//     display: block;
-//     width: 0;
-//     height: 0;
-//     margin-left:-400px;
-//     border-left: 400px solid transparent;
-//     border-right: 400px solid transparent;
-//     border-bottom: 500px solid #4679BD;
-// }
 
 
 /* DESKTOP MENU */
@@ -156,98 +60,206 @@ p{
   h2{
     color: $reg-green;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.3vw;
   }
   a h2:hover{
     color: $dark-green;
   }
 }
 .logo-image{
-  border: 2px solid green;
-  display: flex;
-  justify-content: center;
   height: 30%;
   width: 100%;
+  display: flex;
   img{
+    margin: auto;
     height: 100%;
+    max-height: 150px;
+    max-width: 150px;
+  }
+}
+
+
+
+/* UPPER  */
+.upper{
+  display: flex;
+  height: 50vh;
+  width: 100%;
+}
+
+.triangles{
+  width: 80%;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 5vw;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 40vw;
+  height: 45%;
+  left: 18%;
+  background-color: $dark-purple;
+  @include triangles;
+  .title-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    h1{
+      font-size: 2vw;
+      width: 100%;
+      margin-top: -75%;
+    }
+    img{
+      width: 100%;
+      max-height: 50px;
+      max-width: 150px;
+    }
+  }
+}
+
+#welcome{
+  display: flex;
+  width: 60%;
+  height: 80%;
+  justify-content: center;
+  background-color: $mid-purple;
+  @include triangles;
+  p{
+    text-align: center;
+    align-self: flex-end;
+    font-size: 1.1vw;
+    width: 40%;
+    height: 50%;
+  }
+}
+
+#entrance{
+  position: absolute;
+  left: -5%;
+  width: 50%;
+  img{
+    align-self: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 950px;
+    max-height: 550px;
+    @include triangles;
   }
 }
 
 
 
 /* LOWER */
-#spaces{
-  width: 0;
-  height: 0;
+.lower{
+  height: 50vh;
+  width: 100%;
   bottom: 0;
-  right: 13%;
-  align-self: flex-end;
-  position: absolute;
-  border-right: 375px solid transparent;
-  border-left: 375px solid transparent;
-  border-bottom: 575px solid $dark-purple;
 }
-.spaces-content{
+
+#spaces{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 300px;
-  position: relative;
-  width: 400px;
-  height: auto;
-  top: 90px;
-  right: 200px;
-  h2{
-    width: 100%;
-    text-align: center;
-    font-family: Michroma;
-    font-size: 1.8em;
-    color: $reg-green;
-    margin: 0px;
-  }
-  img{
-    width: 35%;
-    height: auto;
-    margin: auto;
+  position: absolute;
+  width: 40vw;
+  height: 43%;
+  left: 38%;
+  bottom: 0;
+  background-color: $dark-purple;
+  @include triangles;
+  .spaces-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    h2{
+      font-size: 1.5vw;
+      width: 100%;
+      margin-top: -75%;
+    }
+    img{
+      width: 100%;
+      max-height: 50px;
+      max-width: 125px;
+    }
   }
 }
 
 #private{
-  right: 23%;
-  border-right: 240px solid transparent;
-  border-left: 240px solid transparent;
-  border-bottom: 350px solid $light-purple;
-  @include spaces;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30vw;
+  height: 27%;
+  left: 40%;
+  bottom: 0;
+  background-color: $light-purple;
+  @include triangles;
 }
 
 #office{
-  right: 45%;
-  border-right: 220px solid transparent;
-  border-left: 220px solid transparent;
-  border-bottom: 400px solid $reg-purple;
-  @include spaces;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30vw;
+  height: 30%;
+  left: 20%;
+  bottom: 0;
+  background-color: $reg-purple;
+  @include triangles;
 }
 
 #open{
-  right: -5%;
-  border-right: 250px solid transparent;
-  border-left: 250px solid transparent;
-  border-bottom: 400px solid $reg-purple;
-  @include spaces;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30vw;
+  height: 30%;
+  left: 60%;
+  bottom: 0;
+  background-color: $reg-purple;
+  @include triangles;
 }
 
 #meeting{
-  right: 10%;
-  border-right: 250px solid transparent;
-  border-left: 250px solid transparent;
-  border-bottom: 510px solid $mid-purple;
-  @include spaces;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30vw;
+  height: 36%;
+  left: 50%;
+  bottom: 0;
+  background-color: $mid-purple;
+  @include triangles;
 }
 
 #reserved{
-  right: 33%;
-  border-right: 250px solid transparent;
-  border-left: 250px solid transparent;
-  border-bottom: 495px solid $plum-purple;
-  @include spaces;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 30vw;
+  height: 38%;
+  left: 32%;
+  bottom: 0;
+  background-color: $plum-purple;
+  @include triangles;
 }
