@@ -94,10 +94,6 @@ _<h4 align="center">Desktop</h4>_
   * _Regus - avoid this look (very corporate)_
   * _Collective Agency - calendar page, mobile view look_
 
-## Technology Resources
-
-* {List all technologies and outside resources your project uses. Especially when we begin using outside UI frameworks in week three! Not only does this give credit where credit is due, but it shows employers what tools you're experienced in.}
-
 ## Setup/Installation Requirements
 
 #### _Installing Webpack_
