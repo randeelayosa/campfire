@@ -1,5 +1,4 @@
 @mixin triangles {
-  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   h2{
     color: $light-tan;
@@ -40,5 +39,13 @@
     width: 400px;
     height: 200px;
     margin: 0px;
+  }
+}
+
+@mixin animate-triangle {
+  &:hover{
+    animation: slide 1.5s forwards;
+    cursor: crosshair;
+    z-index: 999;
   }
 }

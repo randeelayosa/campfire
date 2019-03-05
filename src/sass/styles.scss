@@ -1,6 +1,30 @@
 @import "abstracts/_variables";
 @import "abstracts/_mixins";
 
+@keyframes landing {
+  0% {opacity: 1}
+  80% {opacity: 1}
+  95% {opacity: .5}
+  99% {opacity: 0.1; height: 100%; width: 100%;}
+  100% {opacity: 0; height:0px; width: 0px;}
+}
+@keyframes splash {
+  0% {display: block; opacity: 0}
+  50% {opacity: 1;}
+  99% {height: 50%; width: auto;}
+  100% {opacity: 0; height:0px; width: 0px;}
+}
+
+@keyframes slide {
+  0% {transform: scale(1)}
+  100% {transform: scale(2)}
+}
+
+@keyframes forward {
+  0% {font-size: 1.3vw}
+  100% {font-size: 2vw}
+}
+
 
 *{
   margin: 0;
@@ -14,18 +38,25 @@ body{
 }
 
 /* SPLASH PAGE */
-/* #landing{
-  width: 100vw;
-  height: 100vh;
+#landing{
+  background-color: $background;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: landing 4.2s forwards;
 }
 
 #splash{
-  height: 50vw;
+  background-color: $background;
+  z-index: 1;
+  height: 50%;
   width: auto;
-} */
+  animation: splash 4.2s linear forwards;
+}
 
 
 /* HOME PAGE */
@@ -64,6 +95,8 @@ p{
   }
   a h2:hover{
     color: $dark-green;
+    animation: forward 0.45s forwards;
+    cursor: crosshair;
   }
 }
 .logo-image{
@@ -78,12 +111,31 @@ p{
   }
 }
 
+.menu-mobile{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px 0;
+  #logo{
+    height: 40px;
+    justify-self: center;
+    align-self: center;
+    grid-column: 2;
+  }
+  #hamburger{
+    height: 15px;
+    width: 15px;
+    justify-self: flex-end;
+    grid-column: 3;
+    margin-right: 10px;
+  }
+}
+
 
 
 /* UPPER  */
 .upper{
   display: flex;
-  height: 50vh;
+  height: 45vh;
   width: 100%;
 }
 
@@ -135,6 +187,7 @@ p{
   p{
     text-align: center;
     align-self: flex-end;
+    color: $light-tan;
     font-size: 1.1vw;
     width: 40%;
     height: 50%;
@@ -143,16 +196,14 @@ p{
 
 #entrance{
   position: absolute;
+  align-self: flex-end;
+  justify-content: flex-start;
   left: -5%;
   width: 50%;
-  img{
-    align-self: flex-end;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 950px;
-    max-height: 550px;
-    @include triangles;
-  }
+  height: auto;
+  max-width: 950px;
+  max-height: 450px;
+  @include triangles;
 }
 
 
@@ -184,7 +235,7 @@ p{
     h2{
       font-size: 1.5vw;
       width: 100%;
-      margin-top: -75%;
+      margin-top: -92%;
     }
     img{
       width: 100%;
@@ -195,7 +246,6 @@ p{
 }
 
 #private{
-  border: 1px solid red;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -206,10 +256,10 @@ p{
   bottom: 0;
   background-color: $light-purple;
   @include triangles;
+  @include animate-triangle;
 }
 
 #office{
-  border: 1px solid red;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -220,10 +270,10 @@ p{
   bottom: 0;
   background-color: $reg-purple;
   @include triangles;
+  @include animate-triangle;
 }
 
 #open{
-  border: 1px solid red;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -234,10 +284,10 @@ p{
   bottom: 0;
   background-color: $reg-purple;
   @include triangles;
+  @include animate-triangle;
 }
 
 #meeting{
-  border: 1px solid red;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -248,10 +298,10 @@ p{
   bottom: 0;
   background-color: $mid-purple;
   @include triangles;
+  @include animate-triangle;
 }
 
 #reserved{
-  border: 1px solid red;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -262,4 +312,25 @@ p{
   bottom: 0;
   background-color: $plum-purple;
   @include triangles;
+  @include animate-triangle;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  body{
+    height: 100vh;
+  }
+  .menu{
+    display: none;
+  }
+  .triangles{
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .menu-mobile{
+    display: none;
+  }
 }
